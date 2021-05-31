@@ -1,0 +1,18 @@
+1) Se cria um arquivo dentro do working diretory(diretório de trabalho), em que é o diretório onde as mudanças são primeiramente realizadas. Não tem nada na arvore do git ainda. É o "untracked files" e esta escrito em vermelho. Quando se dá um git add, vai pegar o arquivo que estava no working diretory e copiamos o mesmo para a área de Stage(Staging Area), ou seja, o stage é onde adicionamos os arquivos para a árvore do git. Estando na stage, o git passa a rastrear as mudanças nesse arquivo, mas que ainda não está gravado no histórico de versão. Só passa a ser gravado em histórico de versão quando digito o commit e é gerado o hash. Em outras palavras, podemos resumir que o History são mudanças que foram gravadas no diretório de versionamento.
+Após aplicarmos o git commit, percebemos que não tem mais nada no working directory, a árvore está limpa. Pois tudo o que foi feito, foi enviado com êxito para o git directory.
+
+2)Git diff: mostra mudanças que estão no diretório de trabalho em relação ao stage. O arquivo o "---" indica o arquivo original e o "+++" é do arquivo alterado. A parte entre dois @ indica a linha onde começa a alteração do original, o trecho de código a partir da linha original onde ouve mudança, relação ao orignal.
+
+git diff --cached: serve para comparar o que está no stage com o que está commitado. Ou seja, compara o que está stage com o history. Se não houver nenhuma mudança no stage, esse comando não vai apontar nada quando eu digitar e der enter, vai ser vazio.
+
+git diff HEAD: diferente do git diff --cached, o git diff HEAD compara o que está no diretório de trabalho(antes do stage) com o que está comitado. Ou seja, compara o que está no diretório de trabalho com o history.
+
+
+3) primeiramente, foi criado o arquivo echo "Initializing README.md" >> README.md. Ao digitar o comando git diff --cached não vai acontecer nada, pois o arquivo README.md ainda está no diretório de trabalho e não foi dado anteriormente o git add, já que o git diff --cached serve para comparar mudanças está stage com o history, e até então o stage é igual ao history. Ao digitar git commit -am "Adding README.md file", com "am" no comando, realiza um git add e um git commit ao mesmo tempo. Logo, depois de commitar, quando eu digitar git diff --cached, também não vai retornar nada, pois já foi enviado do stage para o histórico.
+
+4) Primeiro devemos escrever o git diff --cached para ver se houve mudanças com o há no stage em comparação ao que está commitado. Supondo que houve mudanças no stage e eu quero reverter o stage para a última versão do commit, para isso eu uso o comando git reset HEAD. Depois de usar esse comando, se eu der um git diff --cached não vai apresentar mais nada, pois há haverá mais mudanças no stage. Além disso, para retirar as mudanças também no diretório de trabalho digito o git checkout. Portanto, a partir de agora, se digitarmos os comandos da segunda questão git diff, git diff - -cached e git diff HEAD todos eles terão a mesma saída, ou seja, não irá retornar nenhuma mudança.
+
+5)
+
+6)o git reset HEAD serve para reverter o stage para última versão do commit, assim como o git reset HEAD~ volta a versões anteriores ao último commit.
+O comando o comando git reset - -hard HEAD vai pegar a versão anterior, vai sobrescrever o que está no stage e também no diretório de trabalho. Lembrar de salvar o que for necessário, já que irá mexer com o diretório de trabalho e com o stage.

@@ -1,0 +1,110 @@
+1)Shell: O shell é a interface entre o kernel e o usuário. Ou seja, uma camada que disponibiliza uma liguagem programável, então tanto é interpretador quanto a própria linguagem. O bash é um tipo de shell.
+
+bash: são variações de uma linguagem e um interpretador que interpreta em que se pode programar comandos.
+
+terminal: é uma tela onde posso logar em um host e que se pode ter vários usuários na máquina. Nele encontramos usuários, host(máquina onde está logado), diretório(o ~ é o padrão para home/usuário) e tipo do usuário ($comum ou #admin).
+
+
+2) segue a ordem de comandos ->: 
+
+comando: gedit  (cria um documento txt)
+comando: cat log.txt (vê o que há no arquivo txt, que no caso será a tabela com 5 linhas, incluindo o título)
+comando: sed -i '4,5d' log.txt (removerá a penúltima e a última linha do documento txt.)
+Portanto, o resultado será:
+Linha Conteúdo da Linha
+1 log 1 2020-03-01
+2 log 2 2020-03-02
+
+3)
+
+
+4)
+>>>>primeiro comando:  cat /proc/meminfo
+listou:
+
+MemTotal:        8136008 kB
+MemFree:         1160204 kB
+MemAvailable:    6095912 kB
+Buffers:          587952 kB
+Cached:          4312988 kB
+SwapCached:            0 kB
+Active:          4556312 kB
+Inactive:        1814732 kB
+Active(anon):    1476612 kB
+Inactive(anon):    41940 kB
+Active(file):    3079700 kB
+Inactive(file):  1772792 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+SwapTotal:       1998844 kB
+SwapFree:        1998844 kB
+Dirty:                 0 kB
+Writeback:             8 kB
+AnonPages:       1470252 kB
+Mapped:           318432 kB
+Shmem:             48452 kB
+Slab:             435100 kB
+SReclaimable:     385948 kB
+SUnreclaim:        49152 kB
+KernelStack:        9520 kB
+PageTables:        31308 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6066848 kB
+Committed_AS:    4593288 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      410860 kB
+DirectMap2M:     7946240 kB
+
+>>>>segundo comando:
+-sudo apt-get install inxi
+-inxi -F
+listou: 
+
+System:    Host: desktop-i7 Kernel: 4.15.0-142-generic x86_64 (64 bit)
+           Desktop: Unity 7.4.5  Distro: Ubuntu 16.04 xenial
+Machine:   Mobo: INTEL model: H61
+           Bios: American Megatrends v: 4.6.5 date: 07/19/2017
+CPU:       Quad core Intel Core i7-2600 (-HT-MCP-) cache: 8192 KB 
+           clock speeds: max: 3800 MHz 1: 2317 MHz 2: 1621 MHz 3: 1740 MHz
+           4: 2059 MHz 5: 2248 MHz 6: 2133 MHz 7: 1853 MHz 8: 1740 MHz
+Graphics:  Card: Advanced Micro Devices [AMD/ATI] Turks PRO [Radeon HD 6570/7570/8550]
+           Display Server: X.Org 1.19.6 drivers: ati,radeon (unloaded: fbdev,vesa)
+           Resolution: 1920x1080@60.00hz
+           GLX Renderer: AMD TURKS (DRM 2.50.0 / 4.15.0-142-generic, LLVM 6.0.0)
+           GLX Version: 3.0 Mesa 18.0.5
+Audio:     Card-1 Advanced Micro Devices [AMD/ATI] Turks HDMI Audio [Radeon HD 6500/6600 / 6700M Series]
+           driver: snd_hda_intel
+           Card-2 Intel 6 Series/C200 Series Family High Definition Audio Controller
+           driver: snd_hda_intel
+           Card-3 Intel driver: USB Audio
+           Sound: Advanced Linux Sound Architecture v: k4.15.0-142-generic
+Network:   Card: Realtek RTL810xE PCI Express Fast Ethernet controller
+           driver: r8169
+           IF: enp3s0 state: up speed: 100 Mbps duplex: full
+           mac: 00:e0:4c:37:43:e6
+Drives:    HDD Total Size: 1000.2GB (38.9% used)
+           ID-1: /dev/sda model: ST1000VM002 size: 1000.2GB
+Partition: ID-1: / size: 457G used: 361G (84%) fs: ext4 dev: /dev/sda6
+           ID-2: swap-1 size: 2.05GB used: 0.00GB (0%) fs: swap dev: /dev/sda5
+RAID:      No RAID devices: /proc/mdstat, md_mod kernel module present
+Sensors:   System Temperatures: cpu: 29.8C mobo: 27.8C gpu: 42.0
+           Fan Speeds (in rpm): cpu: N/A
+Info:      Processes: 246 Uptime: 9 days Memory: 2056.3/7945.3MB
+           Client: Shell (bash) inxi: 2.2.35 
+5)
+
